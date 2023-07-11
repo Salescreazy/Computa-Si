@@ -92,7 +92,8 @@ if (!isset($_SESSION["TentativaDeLogin"]) or ($_SESSION["TentativaDeLogin"] == f
         <!-- INICIO CONEXÃO COM O BANCO DE DADOS E REALIZAÇÃO DA CONSULTA NA TABELA COMPUTADORES -->
         <?php
         require("conexaobd.php");
-         $consulta ="select ".
+         $consulta = 
+            "select " .
             "computador.IDCOMPUTADOR AS idComputador " .
             "computador.NOME AS nomeComputador " .
             "computador.MARCA AS marcaComputador " .
@@ -111,7 +112,7 @@ if (!isset($_SESSION["TentativaDeLogin"]) or ($_SESSION["TentativaDeLogin"] == f
             "laboratorio.NOME nomeLaboratorio " .
             "from computador " .
             "inner join laboratorio on laboratorio.NOME=computador.IDLABORATORIO" .
-            "order by nomeLaboratorio,nomecomputador; ";
+            "order by nomeLaboratorio,nomecomputador;" ;
 
             $stmt =  $pdo->prepare($consulta);
             $stmt -> execute();

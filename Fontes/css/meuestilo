@@ -1,0 +1,56 @@
+.meu-body{
+    background-color: black;
+}
+
+.meu-alert-login-incorreto{
+    text-align: center;
+    margin-top: 20px; 
+    margin-right:300px;
+    margin-bottom: 20px;
+    margin-left: 300px;
+
+}
+
+.meu-container{
+    /* Inicio das Margens */
+    margin-top: 20px;
+    margin-right: 100px;
+    margin-bottom: 20px;
+    margin-left: 100px;
+    /* Fim das Margens */
+    /*********************/
+    /* Inicio da borda */
+    border: 1px solid white;
+    border-radius: 20px;
+    /* Fim da borda */
+    /*********************/
+    /* Inicio do espaçamento interno */
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    /* Fim do espaçamento interno */
+    /*********************/
+    /* Inicio da cor de fundo */
+    background-color: #D3D3D3;
+    /* Fim da cor de fundo */
+}
+
+.navbar-green{
+    color: green !important;
+
+}
+
+
+
+
+
+/*
+<!--
+<a class="link-meu-email" href="mailto:joaochavessales3236@gmail.com">
+joaochavessales3236@gmail.com
+</a>
+lucii.cardoso_
+
+-->
+*/

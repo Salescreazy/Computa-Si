@@ -113,8 +113,8 @@ if (!isset($_SESSION["TentativaDeLogin"]) or ($_SESSION["TentativaDeLogin"] == f
             "inner join laboratorio on laboratorio.NOME=computador.IDLABORATORIO" .
             "order by nomeLaboratorio,nomecomputador; ";
 
-            $stmt = $pdo->prepare($consulta);
-            $stmt->execute();
+            $stmt =  $pdo->prepare($consulta);
+            $stmt -> execute();
         ?>
         <!-- FIM DA CONEXÃO COM O BANCO DE DADOS -->
 

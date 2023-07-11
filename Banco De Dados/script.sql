@@ -90,7 +90,7 @@ VALUES
 
 
 
-# SELECTS 
+# SELECTS PARA PEGARMOS OS DADOS E INSERIRMOS EM NOSSO SITE 
 
 #'Select' TiposDeUsuários
 select IDTIPODEUSUARIO as idTipodeusuario, NOME as nomeTipodeusuario from tipodeusuario order by NOME;  // dando erro // mas depois deu certo

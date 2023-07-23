@@ -50,14 +50,13 @@ ALTER  TABLE chamado ADD HRATENDIMENTO          VARCHAR(20)                    N
 ALTER  TABLE chamado ADD FOREIGN KEY(IDUSUARIO) REFERENCES   usuario        (IDUSUARIO);
 ALTER  TABLE chamado ADD FOREIGN KEY(IDCOMPUTADOR) REFERENCES computador (IDCOMPUTADOR);
 
-
 #inserir DADOS TABELA laboratorio.
 insert into laboratorio (NOME) values("Programação para Web");
 insert into laboratorio (nome) values("Programação para Web");
 #Select para tabela laboratorio.
 SELECT IDLABORATORIO as idLaboratorio, NOME as nomeLaboratorio from laboratorio ORDER BY NOME;
 
-+# inserir DADOS TABELA tipodeusuario
+# inserir DADOS TABELA tipodeusuario
 INSERT INTO tipodeusuario (NOME) VALUES("PROFESSOR");
 
 # inserir DADOS TABELA usuarios
@@ -93,18 +92,26 @@ VALUES
 # SELECTS PARA PEGARMOS OS DADOS E INSERIRMOS EM NOSSO SITE 
 
 #'Select' TiposDeUsuários
-select IDTIPODEUSUARIO as idTipodeusuario, NOME as nomeTipodeusuario from tipodeusuario order by NOME;  // dando erro // mas depois deu certo
-select IDTIPODEUSUARIO, NOME from tipodeusuario order by NOME; // codigo que deu certo de primeira
+select IDTIPODEUSUARIO as idTipodeusuario, NOME as nomeTipodeusuario from tipodeusuario order by NOME;  
+// dando erro //
+// mas depois deu certo //
+// ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ //
+// codigo que deu certo de primeira //
+select IDTIPODEUSUARIO, NOME from tipodeusuario order by NOME;
 
-#'Select' Usuarios
+//——————————————————————————————————————————————————————————————//
+
+#'Select' Usuario
     "select ". 
     "usuario.IDUSUARIO AS idUsuario, ". 
     "usuario.NOME AS nomeUsuario, ". 
     "tipodeusuario.NOME AS nomeTipoDeUsuario ". 
     "from usuario ". 
     "inner join tipodeusuario on usuario.IDTIPODEUSUARIO = tipodeusuario.IDTIPODEUSUARIO ".
-    "order by nomeUsuario;";
+    "order by nomeUsuario;" ;
 
-    // essa forma concatena os comandos no banco de dados, sendo mais facil para a aplicação entender o que tem que fazer
+    // essa forma concatena os comandos no banco de dados, sendo mais facil para a aplicação entender o que tem que fazer no seu código 
+
+//——————————————————————————————————————————————————————————————//
 
 #'Select' Computadores
